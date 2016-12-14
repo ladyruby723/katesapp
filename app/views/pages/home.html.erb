@@ -1,12 +1,12 @@
 <% if user_signed_in? %>
     <div class="jumbotron jumbotron-home">
         <div class="container">
-            <h1>Welcome back!</h1>
+            <h1 style="text-info">Welcome back!</h1>
 <% else %>
     <div class="jumbotron jumbotron-home">
         <div class="container">
-            <h1>Welcome!</h1>
-            <p>This is a networking site for entrepreneurs.</p>
+            <h1 style="text-info">Welcome!</h1>
+            <p class="text-info">This is a networking site for entrepreneurs.</p>
             <%= link_to "Learn more »", "#", class: "btn btn-secondary btn-lg" %>
             
         </div>
