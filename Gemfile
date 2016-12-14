@@ -10,6 +10,7 @@ gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'devise'
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
