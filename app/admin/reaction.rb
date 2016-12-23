@@ -13,5 +13,5 @@ ActiveAdmin.register Reaction do
 #   permitted
 # end
 
-permit_params :user, :title, :url, :text, :content
+permit_params :user, :title, :url, :text
 end

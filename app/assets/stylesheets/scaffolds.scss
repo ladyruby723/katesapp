@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #c00;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -9,13 +9,13 @@ body {
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
   margin: 33px;
 }
 
 pre {
-  background-color: #eee;
+  background-color: #c00;
   padding: 10px;
   font-size: 11px;
 }
@@ -29,7 +29,7 @@ a {
 
   &:hover {
     color: #fff;
-    background-color: #000;
+    background-color: #c00;
   }
 }
 
@@ -50,22 +50,22 @@ div {
 }
 
 #notice {
-  color: green;
+  color: darkred;
 }
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: darkred;
   display: table;
 }
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid darkred;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #ce461c;
 
   h2 {
     text-align: left;
@@ -75,7 +75,7 @@ div {
     margin: -7px;
     margin-bottom: 0;
     background-color: #c00;
-    color: #fff;
+    color: #ce461c;
   }
 
   ul li {

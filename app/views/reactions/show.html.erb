@@ -1,33 +1,35 @@
 <div class="container">
-  
-  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="offset-md-2 col-md-8">
+      <div class="card card-block">
+        <h4 class="card-title"><%= @reaction.user.username %></h4>
+          <p>
+            <strong>User:</strong>
+             <%= @reaction.user.username %>
+          </p>
+          <p>
+            <strong>Title:</strong>
+            <%= @reaction.title %>
+          </p>
+          <% if @reaction.url? %>
+          <p>
+            <strong>Url:</strong>
+            <%= @reaction.url %>
+         </p>
+          <% end %>
+          <% if @reaction.text? %>
+          <p>
+            <strong>Text:</strong>
+            <%= @reaction.text %>
+          </p>
+          <% end %>
 
-  <p>
-    <strong>User:</strong>
-    <%= @reaction.user.username %>
-  </p>
-
-  <p>
-    <strong>Title:</strong>
-    <%= @reaction.title %>
-  </p>
-
-  <p>
-    <strong>Url:</strong>
-    <%= @reaction.url %>
-  </p>
-
-  <% if @item.text? %>
-  <p>
-    <strong>Text:</strong>
-    <%= @reaction.text %>
-  </p>
-  <% end %>
-
-  <% if @reaction.user == current_user %>
-    <%= link_to 'Edit', edit_reaction_path(@reaction) %> |
-    <%= link_to 'Delete', @reaction, method: :destroy, class: "card-link" %>
-  <% end %>
-    <%= link_to 'Back', reactions_path %>
-  
+          <% if @reaction.user == current_user %>
+            <%= link_to 'Edit', edit_reaction_path(@reaction), class: "card-link" %>
+            <%= link_to 'Delete', @reaction, method: :delete, class: "card-link" %>
+          <% end %>
+          <%= link_to 'Back', reactions_path %>
+      </div>
+    </div>
+  </div>
 </div>

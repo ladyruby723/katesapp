@@ -18,10 +18,10 @@ permit_params :email, :admin, :name, :username
 form do |f|
     f.semantic_errors
     f.inputs do
-        f.input :email
-        f.input :admin
         f.input :name
         f.input :username
+        f.input :email
+        f.input :admin
     end
     f.actions
 end
