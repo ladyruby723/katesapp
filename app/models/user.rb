@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :tweets
   has_many :articles
   has_many :reactions
+
+  validates :username, presence: true, uniqueness: true, length: { minimum:6 }
+  validates :name, presence: true
 end
