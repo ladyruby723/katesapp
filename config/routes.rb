@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reactions
   resources :articles
   resources :tweets
   ActiveAdmin.routes(self)

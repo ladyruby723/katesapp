@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :tweets
   has_many :articles
+  has_many :reactions
 end

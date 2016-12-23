@@ -1,0 +1,33 @@
+<div class="container">
+  
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>User:</strong>
+    <%= @reaction.user.email %>
+  </p>
+
+  <p>
+    <strong>Title:</strong>
+    <%= @reaction.title %>
+  </p>
+
+  <p>
+    <strong>Url:</strong>
+    <%= @reaction.url %>
+  </p>
+
+  <% if @item.text? %>
+  <p>
+    <strong>Text:</strong>
+    <%= @reaction.text %>
+  </p>
+  <% end %>
+
+  <% if @reaction.user == current_user %>
+    <%= link_to 'Edit', edit_reaction_path(@reaction) %> |
+    <%= link_to 'Delete', @reaction, method: :destroy, class: "card-link" %>
+  <% end %>
+    <%= link_to 'Back', reactions_path %>
+  
+</div>
