@@ -51,6 +51,6 @@ class ReactionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reaction_params
-      params.require(:reaction).permit(:content, :title, :url, :text)
+      params.require(:reaction).permit(:content, :title, :url)
     end
 end

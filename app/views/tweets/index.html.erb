@@ -1,14 +1,29 @@
 <div class="container">
 
-  <div calss="row">
+  <div class="row">
     <div class="col-md-4">
       <div class="card card-block">
-        <% if user_signed_in? %>
-          <h4 class="card-title">Your Account</h4>
-          <p class="card-text"><%= link_to current_user.username, user_path(current_user.username) %></p>
-        <% else %>
-          <p class="card-text"><%= link_to "Sign up now!", signup_path %></p>
-        <% end %>
+        <div class="row">
+          <% if user_signed_in? %>
+            <h4 class="card-title">Your Account</h4>
+            <p class="card-text"><%= link_to current_user.username, user_path(current_user.username) %></p>
+            <p class="card-text">Votes</p>
+          <% else %>
+            <p class="card-text"><%= link_to "Sign up now!", signup_path %></p>
+          <% end %>
+          <ul class="list-group">
+              <% @tweets.each do |tweet| %>
+                <p><%= tweet.votes_for.up.size %></p>
+                  <% if user_signed_in? %>
+                    <% if current_user.voted_up_on? tweet %>
+                      <p><%= link_to 'Unvote', unvote_tweet_path(tweet), method: :delete %></p>
+                    <% else %>
+                      <p><%= link_to 'Vote', vote_tweet_path(tweet), method: :post %></p>
+                    <% end %>
+                  <% end %>
+                <% end %>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="col-md-8">
