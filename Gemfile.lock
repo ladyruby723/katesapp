@@ -9,6 +9,13 @@ GIT
       responders
 
 GIT
+  remote: git://github.com/tcocca/acts_as_follower.git
+  revision: c395dd2f1d62a5879e9d084c770dc35e02ee1043
+  specs:
+    acts_as_follower (0.2.1)
+      activerecord (>= 4.0)
+
+GIT
   remote: https://github.com/codahale/bcrypt-ruby.git
   revision: 23b0517e20e7ddf2e733c1bcdb22b0b12166f042
   specs:
@@ -215,6 +222,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (~> 1.0.0.pre4)
+  acts_as_follower!
   bcrypt!
   bootstrap (~> 4.0.0.alpha4)
   byebug
