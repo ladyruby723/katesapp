@@ -1,5 +1,5 @@
 class Reaction < ApplicationRecord
   belongs_to :user
   validates :user, presence: true
-  validates :content, presence: true
+  validates :text, presence: true
 end
