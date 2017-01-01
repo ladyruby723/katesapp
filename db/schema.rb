@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 20161224031755) do
     t.integer  "user_id"
     t.string   "title"
     t.string   "url"
-    t.text     "text"
+    t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_reactions_on_user_id"

@@ -19,7 +19,9 @@
         <% @reactions.each do |reaction| %>
           <%= link_to reaction, class: "list-group-item list-group-item-action" do %>
             <h5 class="list-group-item-heading"><%= reaction.user.username %></h5>
-            <p class="list-group-item-text"><%= reaction.content %></p>
+            <p class="list-group-item-text"><%= reaction.text %></p>
+            <p></p>
+            <p class="list-group-item-text"><%= reaction.url %></p>
           <% end %>
         <% end %>
       </ul>
