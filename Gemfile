@@ -13,6 +13,7 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 gem "acts_as_follower", github: "tcocca/acts_as_follower"
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'actionview-encoded_mail_to', '~> 1.0', '>= 1.0.9'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

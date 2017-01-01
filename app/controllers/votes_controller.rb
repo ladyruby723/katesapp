@@ -10,6 +10,6 @@ class VotesController < ApplicationController
   def destroy
       tweet = Tweet.find(params[:id])
       tweet.unliked_by current_user
-      redirect_to items_path, notice: "Unliked"
+      redirect_to tweets_path, notice: "Unliked"
   end
 end
